@@ -1,0 +1,89 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Mariano\Desktop\moduladorBPSK_V6\moduladorBPSK_V6\moduladorBPSK_V5\moduladorBPSK_V1\simulation\modelsim
+Emodulador_tb
+Z1 w1653688730
+Z2 DPx4 ieee 16 std_logic_textio 0 22 ?Il0a149GV276[?[UMDWh2
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Mariano\Desktop\moduladorBPSK_V6\moduladorBPSK_V6\moduladorBPSK_V5\moduladorBPSK_V1\simulation\modelsim
+Z6 8C:/Users/Mariano/Desktop/moduladorBPSK_V6/moduladorBPSK_V6/moduladorBPSK_V5/moduladorBPSK_V1/modulador_TB.vhd
+Z7 FC:/Users/Mariano/Desktop/moduladorBPSK_V6/moduladorBPSK_V6/moduladorBPSK_V5/moduladorBPSK_V1/modulador_TB.vhd
+l0
+L6
+V71LN3HnbNNhGd0mO0jO@c3
+!s100 Mh^;2?1iF42@Yg6h0fS<E1
+Z8 OV;C;10.1d;51
+31
+!i10b 1
+Z9 !s108 1653688864.910000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Mariano/Desktop/moduladorBPSK_V6/moduladorBPSK_V6/moduladorBPSK_V5/moduladorBPSK_V1/modulador_TB.vhd|
+Z11 !s107 C:/Users/Mariano/Desktop/moduladorBPSK_V6/moduladorBPSK_V6/moduladorBPSK_V5/moduladorBPSK_V1/modulador_TB.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+Acomportamiento
+R2
+R3
+R4
+DEx4 work 12 modulador_tb 0 22 71LN3HnbNNhGd0mO0jO@c3
+l62
+L9
+VLL[Wl3C4fa@?Y`HM6<9L82
+!s100 =@;H_1UalgbDG@]4l7dH@0
+R8
+31
+!i10b 1
+R9
+R10
+R11
+R12
+R13
+Emoduladorbpsk_v15
+Z14 w1653688836
+Z15 DPx10 cycloneiii 20 cycloneiii_atom_pack 0 22 n^46VOjinLK5_01fgQc6Z0
+Z16 DPx10 cycloneiii 21 cycloneiii_components 0 22 VeH8af>S`B?U[[D6_Khe@0
+Z17 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z18 DPx6 altera 11 dffeas_pack 0 22 Giz7C_dB_=WZS^1=3P8073
+Z19 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+R3
+R4
+Z20 DPx6 altera 28 altera_primitives_components 0 22 W]_:GkoiISnEn83KNb:3:2
+R5
+Z21 8modulador_7_1200mv_85c_slow.vho
+Z22 Fmodulador_7_1200mv_85c_slow.vho
+l0
+L36
+V=kVP923ITQXkD=3X;cA2h1
+R8
+31
+Z23 !s108 1653688863.972000
+Z24 !s90 -reportprogress|300|-93|-work|work|modulador_7_1200mv_85c_slow.vho|
+Z25 !s107 modulador_7_1200mv_85c_slow.vho|
+R12
+R13
+!s100 A=;56J_NgkhHhOWzAZfCS2
+!i10b 1
+Astructure
+R15
+R16
+R17
+R18
+R19
+R3
+R4
+R20
+DEx4 work 17 moduladorbpsk_v15 0 22 =kVP923ITQXkD=3X;cA2h1
+l904
+L116
+VUgH=[ZzzM;QDER7jzGVEM2
+R8
+31
+R23
+R24
+R25
+R12
+R13
+!s100 6^a;jS_?Ce1_lckaCUMUA3
+!i10b 1

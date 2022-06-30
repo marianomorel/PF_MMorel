@@ -1,0 +1,98 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+entity modulador_TB is --TB no tiene I/O en su entidad
+end modulador_TB;
+
+architecture comportamiento of modulador_TB is
+
+component moduladorSCH_V
+	port
+	(
+		entrada :  IN  STD_LOGIC;
+		reset :  IN  STD_LOGIC;
+		clk_1023 :  OUT  STD_LOGIC;
+		prng_o :  OUT  STD_LOGIC;
+		c1 :  OUT  STD_LOGIC;
+		locked :  OUT  STD_LOGIC;
+		dato_o: OUT STD_LOGIC;
+		cuenta_o :  OUT  STD_LOGIC_VECTOR(10 DOWNTO 0);
+		indice_o :  OUT  STD_LOGIC_VECTOR(10 DOWNTO 0);
+		salida :  OUT  STD_LOGIC_VECTOR(11 DOWNTO 0)
+		
+	);
+end component;
+
+--file file_RESULTS : text; 
+--se agrega file para generar un archivo de texto de salida 
+
+constant period : time := 8 ns;
+signal entrada: std_logic;
+signal reset: std_logic:='0';
+signal prng_o :  STD_LOGIC;
+signal clk_1023 :  STD_LOGIC;
+signal c1 :   STD_LOGIC;
+signal locked :   STD_LOGIC;
+signal dato_o: STD_LOGIC;
+signal cuenta_o: STD_LOGIC_VECTOR(10 DOWNTO 0);
+signal indice_o: STD_LOGIC_VECTOR(10 DOWNTO 0);
+signal salida: std_logic_vector (11 downto 0):="000000000000";
+
+
+--signal s1_out:natural range 0 to 1023:= 0; 
+
+--las señales son correctas. se agrega el periodo de clk como constante de tipo time  y carga y rst se le
+--asigna el valor 0
+
+begin
+--file_open(file_RESULTS, "C:\Users\luciana\Documents\Proy_final_modulador\onda_mod\onda_salida.txt", write_mode);
+--atencion a la forma 
+uut: moduladorSCH_V 
+port map(
+entrada=>entrada,
+reset=>reset,
+clk_1023=>clk_1023,
+prng_o=>prng_o,
+c1=>c1,
+locked=>locked,
+dato_o=>dato_o,
+cuenta_o=>cuenta_o,
+indice_o=>indice_o,
+salida=>salida
+);
+--no entiendo por que se escribe asi, es solo una redundancia? rta:nO, A LA IZQUIERA ES LA ENTRADA/SALIDA DEL CIRCUITO Q ESTAS TESTEANDO A LA DERECHA LOS CABLES(SEÑALES) QUE SE LES PONE EL MISMO NOMRBE POR SIMPLICIDAD, PERO PODRIAN SER OTROS NOMBRES (LUCIANA)
+
+--en el testbench no lleva i/o en el process, rta: NO ES I/O ES LA LISTA DE SENSIBILIDAD, CUANDO LAS SEÑALES EN ESA LISTA VARIAN SE EJECUTA EL PROCESO (LUCIANA)
+clock_process :process      
+begin
+    entrada <= '1';
+    wait for period/2;
+    entrada <= '0';
+    wait for period/2;
+end process;
+
+ estimulo_process :process     
+begin --aca va con flecha
+     reset <= '1'; --SE ASIGNA CON FLECHA A LOS QUE ES SEÑAL (CABLES)
+     wait for period*100;
+	  reset <= '0';
+	  wait;
+end process; 
+  
+-- write_process: process --proceso para escribir la salida en un archivo de texto
+--    variable v_OLINE     : line; --ver significado
+--    variable v_SPACE: character; 
+--    begin
+--       wait on ent; --ver wait on
+--		 if rt='0' then
+--		 if ent='1' then
+--	      write(v_OLINE,sal); --que es write
+--      writeline(file_RESULTS, v_OLINE); --que es writeline
+--		end if;
+--		end if;
+--    end process;
+--  
+end; -- o va end comportamiento??? rta, VA SOLO END
+--VER MODELSIM

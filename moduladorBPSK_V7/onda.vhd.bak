@@ -1,0 +1,118 @@
+-- ONDA SENOIDAL -- AL SIMULAR PONER EN RADIX UNSIGNED
+--no se porque la grafica se ve de ese modo
+
+library ieee; -- LIBRERIA --
+use ieee.std_logic_1164.all;
+--use ieee.std_logic_arith.all;--esta libreria no es estandar, da problema porque repite definiciones, 
+--las funciones q usabas de esta libreria las cambie por otras q estan en la librerias estandar
+use ieee.std_logic_signed.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity onda is -- ENTIDAD --
+port(clk:in std_logic;
+     rst:in std_logic;
+	  F_in: in std_logic_vector(4 downto 0);
+	  --entrada que dice los pasos en los q se lee la memoria, 
+	  --define la frecuencia, si es 00001 es la minima frecuencia 
+	  --(se lee toda la memoria, y cuanto su valor es mas grande mayor frecuencia, 
+	  --se saltea posiciones de la memoria.
+ 	  dato: in std_logic;--define la modulacion 00 bpsk 01 QPSK
+	  cuenta_o: out integer range 0 to 1024; --no sería 1023?
+	  dato_o: out std_logic;
+	  indice_o: out integer range 0 to 1024; --no sería 1023?
+	  salida: out std_logic_vector(11 downto 0) --12 bits que van al ADC;
+	  );
+end onda;
+
+architecture comportamiento of onda is -- ARQUITECTURA, SEÑALES Y MATRIZ -- 
+--defino señales y constantes antes del begin de la arquitectura
+--constant M: integer:=10;
+signal dato_i: integer;
+--signal dato_o: std_logic;--define la modulacion 00 bpsk 01 QPSK
+--signal N: integer range 0 to M-1; -- N DEBERIA SER ENTRADA PERO NO PUEDO HACERLO FUNCIONAR JUNTO CON M 
+--signal P: integer range 0 to M-1; 
+signal F: integer range 0 to 31;
+--le puse hasta 31 por poner, pero habria que ver cuantas posiciones se puede 
+--saltear como maximo y que la sinusoidal de salida al menos saque una cantidad de muestars por periodo que se 
+--vea relativamente bien la sinusoidal. modificar archivo "frecuencia" en tal caso
+type onda_valores is array (0 to 255) of integer range 0 to 4095;
+constant onda : onda_valores:= 
+--le cambie el nombre al vector porque value creo que era una palabra reservada 
+--y podia traer problema(luciana)
+(0,12,25,37,50,62,75,87,100,112,125,138,150,163,175,188,200,213,225,238,250,263,275,287,300,312,325,337,349,362,
+374,387,399,411,423,436,448,460,472,485,497,509,521,533,545,558,570,582,594,606,618,630,642,654,665,677,689,701,
+713,724,736,748,760,771,783,794,806,818,829,840,852,863,875,886,897,909,920,931,942,953,964,976,987,998,1008,1019,
+1030,1041,1052,1063,1073,1084,1095,1105,1116,1126,1137,1147,1158,1168,1178,1188,1199,1209,1219,1229,1239,1249,1259,
+1269,1279,1288,1298,1308,1317,1327,1337,1346,1355,1365,1374,1383,1393,1402,1411,1420,1429,1438,1447,1456,1465,1473,
+1482,1491,1499,1508,1516,1525,1533,1541,1550,1558,1566,1574,1582,1590,1598,1605,1613,1621,1629,1636,1644,1651,1659,
+1666,1673,1680,1687,1695,1702,1708,1715,1722,1729,1736,1742,1749,1755,1762,1768,1774,1781,1787,1793,1799,1805,1811,
+1816,1822,1828,1834,1839,1845,1850,1855,1861,1866,1871,1876,1881,1886,1891,1895,1900,1905,1909,1914,1918,1923,1927,
+1931,1935,1939,1943,1947,1951,1955,1958,1962,1966,1969,1972,1976,1979,1982,1985,1988,1991,1994,1997,1999,2002,2005,
+2007,2010,2012,2014,2016,2018,2021,2022,2024,2026,2028,2030,2031,2033,2034,2035,2037,2038,2039,2040,2041,2042,2043,
+2043,2044,2045,2045,2046,2046,2046,2046,2046);
+--estos valores los obtuve con matlab, y despues redondee con excel
+--cambie los 255 valores del cuarto de sinusoidal para que aprovechen los 12 bits de DAC en complemento a 2, 
+--puede representar de -2048 a 2047
+
+begin -- PROCESO DE GENERACION DE ONDA SENOIDAL Y SUS REPETICIONES --
+
+F <= to_integer(unsigned(F_in));
+--entrada externa que define los pasos en los que se lee la memoria de la sinusoidal y define la frecuencia
+dato_i<= 0 when dato='0' 
+else 512;
+
+   process(clk,rst,dato)
+	--defino variables antes del begin del proceso
+	variable indice: integer:=0;
+	variable cuenta: integer:=0;
+	begin
+  
+		 if(rst='1') then
+         indice:=dato_i;
+			--esta variable barre todo un periodo de la sinusoidal, 
+			--segun el valor que tenga se identifica en que cuarto de la sinusoidal se esta
+			salida<=(others=>'0');
+			cuenta:=0;
+		 elsif(clk'event and clk='1') then
+				if (indice>1023) then --deberia ser mayor o igual?
+					indice:=0;
+				end if;
+				if (cuenta>1023) then
+					cuenta:=0;
+					indice:=dato_i;
+				end if;
+				if (indice<=255) then 
+				--toma el valor entero de la memoria, lo interpreta como un numero con signo 
+				--y luego lo lleva a 12 bits
+					salida <= std_logic_vector(to_signed(onda(indice), salida'length)); -- PRIMER CUARTO DE ONDA --
+				elsif (255<indice and indice<= 511) then		
+					salida <= std_logic_vector(to_signed(onda(255-(indice-256)), salida'length));-- SEGUNDO CUARTO DE ONDA --
+					--no deberia ser (256-(indice -256))???
+				elsif (511<indice and indice<= 767) then		
+				    salida <= std_logic_vector(to_signed(-onda(indice-512), salida'length));-- TERCER CUARTO DE ONDA --
+				elsif (767<indice and indice<= 1023) then		
+   			   salida <= std_logic_vector(to_signed(-onda(255-(indice-768)), salida'length));-- ULTIMO CUARTO DE ONDA --
+				end if;
+				indice:=indice+F; --barre la memoria a pasos de a F que es la entrada que decide la frecuencia de salida
+				cuenta:=cuenta+1;
+				cuenta_o<=cuenta;
+				indice_o<=indice;
+				dato_o<=dato;
+			end if;
+
+end process;
+end comportamiento;
+		 
+ 
+-- podria tomar muestras mas espaciadas con algun multiplo de s1 (y s1), de manera de variar la frecuencia 
+--o con un divisor de frecuencia?
+
+--la frecuencia de un periodo de modulante seria 78,125khz (12.8 us)? periodo entre muestras (100ps) 
+
+--la ultima muestra no la escribe en la tabla, creo que es por el wait on o porque me paso de los 255, 
+--como lo soluciono?
+
+--porque no me aparecen los valores de s1 y s1?	me faltan darle estimulos?	 
+
+--el pll es un divisor de frecuencia

@@ -1,0 +1,811 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do modulador_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {modulador_7_1200mv_85c_slow.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneiii_atom_pack
+# -- Loading package cycloneiii_components
+# -- Compiling entity MODULADORBPSK_V15
+# -- Compiling architecture structure of MODULADORBPSK_V15
+# 
+# vcom -93 -work work {C:/Users/Mariano/Desktop/moduladorBPSK_V6/moduladorBPSK_V6/moduladorBPSK_V5/moduladorBPSK_V1/modulador_TB.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_textio
+# -- Compiling entity modulador_TB
+# -- Compiling architecture comportamiento of modulador_TB
+# 
+# vsim -t 1ps +transport_int_delays +transport_path_delays -sdftyp /uut=modulador_7_1200mv_85c_vhd_slow.sdo -L altera -L cycloneiii -L gate_work -L work -voptargs="+acc"  modulador_TB
+# vsim +transport_int_delays +transport_path_delays -L altera -L cycloneiii -L gate_work -L work -voptargs=\"+acc\" -sdftyp /uut=modulador_7_1200mv_85c_vhd_slow.sdo -t 1ps modulador_TB 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.modulador_tb(comportamiento)
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneiii.cycloneiii_atom_pack(body)
+# Loading cycloneiii.cycloneiii_components
+# Loading work.moduladorbpsk_v15(structure)
+# Loading cycloneiii.cycloneiii_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cycloneiii.cycloneiii_io_ibuf(arch)
+# Loading cycloneiii.cycloneiii_clkctrl(vital_clkctrl)
+# Loading cycloneiii.cycloneiii_ena_reg(behave)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiii.cycloneiii_io_obuf(arch)
+# Loading cycloneiii.cycloneiii_pllpack(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading cycloneiii.cycloneiii_pll(vital_pll)
+# Loading cycloneiii.cycloneiii_mn_cntr(behave)
+# Loading cycloneiii.cycloneiii_scale_cntr(behave)
+# Loading instances from modulador_7_1200mv_85c_vhd_slow.sdo
+# Loading timing data from modulador_7_1200mv_85c_vhd_slow.sdo
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /modulador_tb File: C:/Users/Mariano/Desktop/moduladorBPSK_V6/moduladorBPSK_V6/moduladorBPSK_V5/moduladorBPSK_V1/modulador_TB.vhd
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: Cyclone III PLL was reset
+#    Time: 7055 ps  Iteration: 0  Instance: /modulador_tb/uut/\b2v_inst5|altpll_component|auto_generated|pll1\
+# ** Note: Cyclone III PLL locked to incoming clock
+#    Time: 842999 ps  Iteration: 0  Instance: /modulador_tb/uut/\b2v_inst5|altpll_component|auto_generated|pll1\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.016 ns; At : 1688.66 ns
+#    Time: 1688660 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.011 ns; At : 2632.655 ns
+#    Time: 2632655 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.157 ns; At : 3000.754 ns
+#    Time: 3000754 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.076 ns; At : 3240.673 ns
+#    Time: 3240673 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.176 ns; At : 3272.773 ns
+#    Time: 3272773 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.124 ns; At : 3448.721 ns
+#    Time: 3448721 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 3496.609 ns
+#    Time: 3496609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.155 ns; At : 3520.752 ns
+#    Time: 3520752 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 3624.609 ns
+#    Time: 3624609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 3912.682 ns
+#    Time: 3912682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.042 ns; At : 3928.678 ns
+#    Time: 3928678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[2]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.034 ns; At : 4008.678 ns
+#    Time: 4008678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.071 ns; At : 4008.702 ns
+#    Time: 4008702 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[5]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 4360.612 ns
+#    Time: 4360612 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 4872.682 ns
+#    Time: 4872682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.018 ns; At : 4936.615 ns
+#    Time: 4936615 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.038 ns; At : 4944.635 ns
+#    Time: 4944635 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.016 ns; At : 9880.66 ns
+#    Time: 9880660 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.011 ns; At : 10824.655 ns
+#    Time: 10824655 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.157 ns; At : 11192.754 ns
+#    Time: 11192754 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.076 ns; At : 11432.673 ns
+#    Time: 11432673 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.176 ns; At : 11464.773 ns
+#    Time: 11464773 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.124 ns; At : 11640.721 ns
+#    Time: 11640721 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 11688.609 ns
+#    Time: 11688609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.155 ns; At : 11712.752 ns
+#    Time: 11712752 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 11816.609 ns
+#    Time: 11816609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 12104.682 ns
+#    Time: 12104682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.042 ns; At : 12120.678 ns
+#    Time: 12120678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[2]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.034 ns; At : 12200.678 ns
+#    Time: 12200678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.071 ns; At : 12200.702 ns
+#    Time: 12200702 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[5]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 12552.612 ns
+#    Time: 12552612 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 13064.682 ns
+#    Time: 13064682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.018 ns; At : 13128.615 ns
+#    Time: 13128615 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.038 ns; At : 13136.635 ns
+#    Time: 13136635 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.016 ns; At : 18072.66 ns
+#    Time: 18072660 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.011 ns; At : 19016.655 ns
+#    Time: 19016655 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.157 ns; At : 19384.754 ns
+#    Time: 19384754 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.076 ns; At : 19624.673 ns
+#    Time: 19624673 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.176 ns; At : 19656.773 ns
+#    Time: 19656773 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.124 ns; At : 19832.721 ns
+#    Time: 19832721 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 19880.609 ns
+#    Time: 19880609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.155 ns; At : 19904.752 ns
+#    Time: 19904752 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 20008.609 ns
+#    Time: 20008609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 20296.682 ns
+#    Time: 20296682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.042 ns; At : 20312.678 ns
+#    Time: 20312678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[2]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.034 ns; At : 20392.678 ns
+#    Time: 20392678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.071 ns; At : 20392.702 ns
+#    Time: 20392702 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[5]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 20744.612 ns
+#    Time: 20744612 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 21256.682 ns
+#    Time: 21256682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.018 ns; At : 21320.615 ns
+#    Time: 21320615 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.038 ns; At : 21328.635 ns
+#    Time: 21328635 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.016 ns; At : 26264.66 ns
+#    Time: 26264660 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.011 ns; At : 27208.655 ns
+#    Time: 27208655 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.157 ns; At : 27576.754 ns
+#    Time: 27576754 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.076 ns; At : 27816.673 ns
+#    Time: 27816673 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.176 ns; At : 27848.773 ns
+#    Time: 27848773 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.124 ns; At : 28024.721 ns
+#    Time: 28024721 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 28072.609 ns
+#    Time: 28072609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.155 ns; At : 28096.752 ns
+#    Time: 28096752 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 28200.609 ns
+#    Time: 28200609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 28488.682 ns
+#    Time: 28488682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.042 ns; At : 28504.678 ns
+#    Time: 28504678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[2]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.034 ns; At : 28584.678 ns
+#    Time: 28584678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.071 ns; At : 28584.702 ns
+#    Time: 28584702 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[5]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 28936.612 ns
+#    Time: 28936612 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 29448.682 ns
+#    Time: 29448682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.018 ns; At : 29512.615 ns
+#    Time: 29512615 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.038 ns; At : 29520.635 ns
+#    Time: 29520635 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.016 ns; At : 34456.66 ns
+#    Time: 34456660 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.011 ns; At : 35400.655 ns
+#    Time: 35400655 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.157 ns; At : 35768.754 ns
+#    Time: 35768754 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.076 ns; At : 36008.673 ns
+#    Time: 36008673 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.176 ns; At : 36040.773 ns
+#    Time: 36040773 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.124 ns; At : 36216.721 ns
+#    Time: 36216721 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 36264.609 ns
+#    Time: 36264609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.155 ns; At : 36288.752 ns
+#    Time: 36288752 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 36392.609 ns
+#    Time: 36392609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 36680.682 ns
+#    Time: 36680682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.042 ns; At : 36696.678 ns
+#    Time: 36696678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[2]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.034 ns; At : 36776.678 ns
+#    Time: 36776678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.071 ns; At : 36776.702 ns
+#    Time: 36776702 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[5]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 37128.612 ns
+#    Time: 37128612 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 37640.682 ns
+#    Time: 37640682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.018 ns; At : 37704.615 ns
+#    Time: 37704615 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.038 ns; At : 37712.635 ns
+#    Time: 37712635 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.089 ns; At : 41552.293 ns
+#    Time: 41552293 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|dato_o\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 45912.648 ns
+#    Time: 45912648 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[7]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.052 ns; At : 45912.683 ns
+#    Time: 45912683 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[6]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.167 ns; At : 45912.811 ns
+#    Time: 45912811 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.016 ns; At : 46744.66 ns
+#    Time: 46744660 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.011 ns; At : 47688.655 ns
+#    Time: 47688655 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.157 ns; At : 48056.754 ns
+#    Time: 48056754 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.076 ns; At : 48296.673 ns
+#    Time: 48296673 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.176 ns; At : 48328.773 ns
+#    Time: 48328773 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.124 ns; At : 48504.721 ns
+#    Time: 48504721 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 48552.609 ns
+#    Time: 48552609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.155 ns; At : 48576.752 ns
+#    Time: 48576752 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 48680.609 ns
+#    Time: 48680609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 48968.682 ns
+#    Time: 48968682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.042 ns; At : 48984.678 ns
+#    Time: 48984678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[2]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.034 ns; At : 49064.678 ns
+#    Time: 49064678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.071 ns; At : 49064.702 ns
+#    Time: 49064702 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[5]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 49416.612 ns
+#    Time: 49416612 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 49928.682 ns
+#    Time: 49928682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.018 ns; At : 49992.615 ns
+#    Time: 49992615 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.038 ns; At : 50000.635 ns
+#    Time: 50000635 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 54104.648 ns
+#    Time: 54104648 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[7]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.052 ns; At : 54104.683 ns
+#    Time: 54104683 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[6]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.167 ns; At : 54104.811 ns
+#    Time: 54104811 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.016 ns; At : 54936.66 ns
+#    Time: 54936660 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.011 ns; At : 55880.655 ns
+#    Time: 55880655 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.157 ns; At : 56248.754 ns
+#    Time: 56248754 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.076 ns; At : 56488.673 ns
+#    Time: 56488673 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.176 ns; At : 56520.773 ns
+#    Time: 56520773 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.124 ns; At : 56696.721 ns
+#    Time: 56696721 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 56744.609 ns
+#    Time: 56744609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.155 ns; At : 56768.752 ns
+#    Time: 56768752 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 56872.609 ns
+#    Time: 56872609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 57160.682 ns
+#    Time: 57160682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.042 ns; At : 57176.678 ns
+#    Time: 57176678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[2]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.034 ns; At : 57256.678 ns
+#    Time: 57256678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.071 ns; At : 57256.702 ns
+#    Time: 57256702 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[5]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 57608.612 ns
+#    Time: 57608612 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 58120.682 ns
+#    Time: 58120682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.018 ns; At : 58184.615 ns
+#    Time: 58184615 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.038 ns; At : 58192.635 ns
+#    Time: 58192635 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 62296.648 ns
+#    Time: 62296648 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[7]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.052 ns; At : 62296.683 ns
+#    Time: 62296683 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[6]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.167 ns; At : 62296.811 ns
+#    Time: 62296811 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.016 ns; At : 63128.66 ns
+#    Time: 63128660 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.011 ns; At : 64072.655 ns
+#    Time: 64072655 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.157 ns; At : 64440.754 ns
+#    Time: 64440754 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.076 ns; At : 64680.673 ns
+#    Time: 64680673 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.176 ns; At : 64712.773 ns
+#    Time: 64712773 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.124 ns; At : 64888.721 ns
+#    Time: 64888721 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 64936.609 ns
+#    Time: 64936609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.155 ns; At : 64960.752 ns
+#    Time: 64960752 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 65064.609 ns
+#    Time: 65064609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 65352.682 ns
+#    Time: 65352682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.042 ns; At : 65368.678 ns
+#    Time: 65368678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[2]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.034 ns; At : 65448.678 ns
+#    Time: 65448678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.071 ns; At : 65448.702 ns
+#    Time: 65448702 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[5]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 65800.612 ns
+#    Time: 65800612 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 66312.682 ns
+#    Time: 66312682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.018 ns; At : 66376.615 ns
+#    Time: 66376615 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.038 ns; At : 66384.635 ns
+#    Time: 66384635 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 70488.648 ns
+#    Time: 70488648 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[7]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.052 ns; At : 70488.683 ns
+#    Time: 70488683 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[6]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.167 ns; At : 70488.811 ns
+#    Time: 70488811 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.016 ns; At : 71320.66 ns
+#    Time: 71320660 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.011 ns; At : 72264.655 ns
+#    Time: 72264655 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.157 ns; At : 72632.754 ns
+#    Time: 72632754 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.076 ns; At : 72872.673 ns
+#    Time: 72872673 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.176 ns; At : 72904.773 ns
+#    Time: 72904773 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.124 ns; At : 73080.721 ns
+#    Time: 73080721 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 73128.609 ns
+#    Time: 73128609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.155 ns; At : 73152.752 ns
+#    Time: 73152752 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 73256.609 ns
+#    Time: 73256609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 73544.682 ns
+#    Time: 73544682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.042 ns; At : 73560.678 ns
+#    Time: 73560678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[2]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.034 ns; At : 73640.678 ns
+#    Time: 73640678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.071 ns; At : 73640.702 ns
+#    Time: 73640702 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[5]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 73992.612 ns
+#    Time: 73992612 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.138 ns; At : 74320.342 ns
+#    Time: 74320342 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|dato_o\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 74504.682 ns
+#    Time: 74504682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.018 ns; At : 74568.615 ns
+#    Time: 74568615 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.038 ns; At : 74576.635 ns
+#    Time: 74576635 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 74592.686 ns
+#    Time: 74592686 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[11]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.016 ns; At : 75416.66 ns
+#    Time: 75416660 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.011 ns; At : 76360.655 ns
+#    Time: 76360655 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.157 ns; At : 76728.754 ns
+#    Time: 76728754 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.076 ns; At : 76968.673 ns
+#    Time: 76968673 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.176 ns; At : 77000.773 ns
+#    Time: 77000773 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.124 ns; At : 77176.721 ns
+#    Time: 77176721 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 77224.609 ns
+#    Time: 77224609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.155 ns; At : 77248.752 ns
+#    Time: 77248752 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.012 ns; At : 77352.609 ns
+#    Time: 77352609 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.085 ns; At : 77640.682 ns
+#    Time: 77640682 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# ** Warning: */DFFEAS HOLD High VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.042 ns; At : 77656.678 ns
+#    Time: 77656678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[2]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.034 ns; At : 77736.678 ns
+#    Time: 77736678 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[4]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.071 ns; At : 77736.702 ns
+#    Time: 77736702 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[5]\
+# ** Warning: */DFFEAS HOLD  Low VIOLATION ON DATAIN WITH RESPECT TO CLK;
+# 
+#   Expected := 0.186 ns; Observed := 0.015 ns; At : 78088.612 ns
+#    Time: 78088612 ps  Iteration: 1  Instance: /modulador_tb/uut/\b2v_inst|salida1[3]\
+# Break key hit 
+# Simulation stop requested.

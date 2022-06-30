@@ -1,0 +1,27 @@
+-- generador de codigo pseudoaletorio, con semilla 
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity multiplexor is
+port (data0_in: in std_logic;
+      data1_in: in std_logic;
+      data_out: out std_logic;
+		sel: in std_logic);
+end multiplexor;
+
+architecture comportamiento of multiplexor is
+
+begin
+process (sel)
+begin 
+if sel='0' then
+   data_out<=data0_in;
+else 
+   data_out<=data1_in;	
+end if;
+end process;
+
+
+
+end architecture;

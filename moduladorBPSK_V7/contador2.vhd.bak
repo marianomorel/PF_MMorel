@@ -1,0 +1,132 @@
+-- Quartus II VHDL Template
+-- Binary Up/Down conter with Saturation
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_signed.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity contador2 is
+
+--	generic
+	--(
+		--MIN_cont : integer := 0;
+		--MAX_cont : integer := 8191
+	--);
+
+	port 
+	(
+		clk		: in std_logic;
+		reset	   : in std_logic;
+		periodos : in std_logic_vector (1 downto 0);
+		q		   : out std_logic;
+		F_I      : in std_logic_vector(3 downto 0)
+	);
+
+end entity;
+
+architecture behavioral of contador2 is
+	signal cont_vector : std_logic_vector (13 downto 0);
+	signal MAX_cont: integer range 0 to 16384;
+	--signal indice: integer range 0 to 13;
+	signal F: integer range 1 to 16;
+begin
+
+   F <= to_integer(unsigned(F_I))+1; 
+	
+	process (periodos)
+	
+		
+	begin
+	
+	case periodos is
+	when "00" => 
+           if F=1 then
+    	  MAX_cont<=512;--1024/2F
+		  elsif F=2 then
+    	  MAX_cont<=256;--1024/2F
+		  elsif F=3 then
+    	  MAX_cont<=170;--1024/2F
+		  elsif F=4 then
+    	  MAX_cont<=128;--1024/2F
+		  elsif F=5 then
+    	  MAX_cont<=102;--1024/2F
+		  elsif F=6 then
+    	  MAX_cont<=85;--1024/2F
+		  elsif F=7 then
+    	  MAX_cont<=73;--1024/2F
+		  elsif F=8 then
+    	  MAX_cont<=64;--1024/2F
+		  elsif F=9 then
+    	  MAX_cont<=56;--1024/2F
+		  elsif F=10 then
+    	  MAX_cont<=51;--1024/2F
+		  elsif F=11 then
+    	  MAX_cont<=46;--1024/2F
+		  elsif F=12 then
+    	  MAX_cont<=42;--1024/2F
+		  elsif F=13 then
+    	  MAX_cont<=39;--1024/2F
+		  elsif F=14 then
+    	  MAX_cont<=36;--1024/2F
+		  elsif F=15 then
+    	  MAX_cont<=34;--1024/2F
+		  elsif F=16 then
+    	  MAX_cont<=32;--1024/2F
+		  end if;
+		  
+	when "01" => 
+	if F=1 then
+    	  MAX_cont<=1024;--2048/2F
+	else 
+	     MAX_cont<=1024;
+	end if:
+	
+	when "10" => 
+	if F=1 then
+    	  MAX_cont<=2048;--4096/2F
+	else  
+	     MAX_cont<=2048;
+	end if;
+	
+	when "11" => 
+	if F=1 then
+    	MAX_cont<=4096;--8196/2F
+	else  
+	   MAX_cont<=4096;
+	end if
+ 
+  end case;
+	
+
+	end process;
+	
+	
+	process (clk)
+		variable cnt : integer range 0 to 16384;
+		
+	begin
+	
+		-- Synchronously update the conter
+			if (reset = '1') then
+				-- Reset the conter to 0
+				cnt := 0;
+
+			elsif (rising_edge(clk)) then
+				-- Increment/decrement the conter, 
+				-- if the limit is not exceeded
+				cnt := cnt + 1;
+				if (cnt=MAX_cont) then 
+				cnt:=0;
+				end if;
+      	end if;
+		-- Output the current cont
+		--cont_vector <= std_logic_vector(to_signed((cnt), cont_vector'length));
+		
+	end process;
+   	
+   q<='1'; 
+ 
+ end behavioral; 
