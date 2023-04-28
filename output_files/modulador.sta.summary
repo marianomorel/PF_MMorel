@@ -1,0 +1,473 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -9.507
+TNS   : -398.655
+
+Type  : Slow 1200mV 85C Model Setup 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : -4.353
+TNS   : -10.734
+
+Type  : Slow 1200mV 85C Model Setup 'onda:b2v_inst|rlj'
+Slack : -3.894
+TNS   : -36.051
+
+Type  : Slow 1200mV 85C Model Setup 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -1.244
+TNS   : -18.613
+
+Type  : Slow 1200mV 85C Model Setup 'b2v_inst5|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.867
+TNS   : -4.332
+
+Type  : Slow 1200mV 85C Model Setup 'reloj_ar:b2v_inst6|reloj_out'
+Slack : -0.352
+TNS   : -0.546
+
+Type  : Slow 1200mV 85C Model Setup 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : -1.060
+TNS   : -17.845
+
+Type  : Slow 1200mV 85C Model Hold 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -0.861
+TNS   : -1.507
+
+Type  : Slow 1200mV 85C Model Hold 'b2v_inst5|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.200
+TNS   : -0.200
+
+Type  : Slow 1200mV 85C Model Hold 'onda:b2v_inst|rlj'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'reloj_ar:b2v_inst6|reloj_out'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -3.397
+TNS   : -223.616
+
+Type  : Slow 1200mV 85C Model Recovery 'onda:b2v_inst|rlj'
+Slack : -2.302
+TNS   : -2.302
+
+Type  : Slow 1200mV 85C Model Recovery 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -2.118
+TNS   : -2.118
+
+Type  : Slow 1200mV 85C Model Recovery 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : -1.914
+TNS   : -1.914
+
+Type  : Slow 1200mV 85C Model Recovery 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : -1.894
+TNS   : -1.894
+
+Type  : Slow 1200mV 85C Model Recovery 'reloj_ar:b2v_inst6|reloj_out'
+Slack : -0.744
+TNS   : -5.255
+
+Type  : Slow 1200mV 85C Model Recovery 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : 2.115
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : -2.307
+TNS   : -36.880
+
+Type  : Slow 1200mV 85C Model Removal 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -1.738
+TNS   : -27.792
+
+Type  : Slow 1200mV 85C Model Removal 'onda:b2v_inst|rlj'
+Slack : -0.987
+TNS   : -16.912
+
+Type  : Slow 1200mV 85C Model Removal 'reloj_ar:b2v_inst6|reloj_out'
+Slack : 0.202
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : 1.873
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : 1.895
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.276
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'onda:b2v_inst|rlj'
+Slack : -1.285
+TNS   : -33.410
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reloj_ar:b2v_inst6|reloj_out'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'entrada'
+Slack : 3.893
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 399.686
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'b2v_inst5|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 249999.701
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -8.298
+TNS   : -350.623
+
+Type  : Slow 1200mV 0C Model Setup 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : -4.023
+TNS   : -9.555
+
+Type  : Slow 1200mV 0C Model Setup 'onda:b2v_inst|rlj'
+Slack : -3.447
+TNS   : -31.511
+
+Type  : Slow 1200mV 0C Model Setup 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -1.037
+TNS   : -15.396
+
+Type  : Slow 1200mV 0C Model Setup 'b2v_inst5|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.620
+TNS   : -3.064
+
+Type  : Slow 1200mV 0C Model Setup 'reloj_ar:b2v_inst6|reloj_out'
+Slack : -0.228
+TNS   : -0.304
+
+Type  : Slow 1200mV 0C Model Setup 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : -0.944
+TNS   : -15.698
+
+Type  : Slow 1200mV 0C Model Hold 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -0.761
+TNS   : -0.997
+
+Type  : Slow 1200mV 0C Model Hold 'b2v_inst5|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.325
+TNS   : -0.325
+
+Type  : Slow 1200mV 0C Model Hold 'onda:b2v_inst|rlj'
+Slack : 0.172
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'reloj_ar:b2v_inst6|reloj_out'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -2.870
+TNS   : -186.249
+
+Type  : Slow 1200mV 0C Model Recovery 'onda:b2v_inst|rlj'
+Slack : -2.007
+TNS   : -2.007
+
+Type  : Slow 1200mV 0C Model Recovery 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -1.867
+TNS   : -1.867
+
+Type  : Slow 1200mV 0C Model Recovery 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : -1.627
+TNS   : -1.627
+
+Type  : Slow 1200mV 0C Model Recovery 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : -1.604
+TNS   : -1.604
+
+Type  : Slow 1200mV 0C Model Recovery 'reloj_ar:b2v_inst6|reloj_out'
+Slack : -0.616
+TNS   : -4.165
+
+Type  : Slow 1200mV 0C Model Recovery 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : 1.970
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : -2.111
+TNS   : -33.752
+
+Type  : Slow 1200mV 0C Model Removal 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -1.614
+TNS   : -25.808
+
+Type  : Slow 1200mV 0C Model Removal 'onda:b2v_inst|rlj'
+Slack : -0.935
+TNS   : -16.202
+
+Type  : Slow 1200mV 0C Model Removal 'reloj_ar:b2v_inst6|reloj_out'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : 1.614
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : 1.640
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.873
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'onda:b2v_inst|rlj'
+Slack : -1.285
+TNS   : -33.410
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : -1.285
+TNS   : -20.560
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reloj_ar:b2v_inst6|reloj_out'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : -1.285
+TNS   : -1.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'entrada'
+Slack : 3.867
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 399.679
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'b2v_inst5|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 249999.703
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -4.474
+TNS   : -188.949
+
+Type  : Fast 1200mV 0C Model Setup 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : -1.827
+TNS   : -3.614
+
+Type  : Fast 1200mV 0C Model Setup 'onda:b2v_inst|rlj'
+Slack : -1.503
+TNS   : -9.633
+
+Type  : Fast 1200mV 0C Model Setup 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -0.442
+TNS   : -6.350
+
+Type  : Fast 1200mV 0C Model Setup 'b2v_inst5|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.257
+TNS   : -1.276
+
+Type  : Fast 1200mV 0C Model Setup 'reloj_ar:b2v_inst6|reloj_out'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : 0.626
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : 0.626
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : -0.607
+TNS   : -10.734
+
+Type  : Fast 1200mV 0C Model Hold 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -0.439
+TNS   : -0.439
+
+Type  : Fast 1200mV 0C Model Hold 'b2v_inst5|altpll_component|auto_generated|pll1|clk[1]'
+Slack : -0.097
+TNS   : -0.097
+
+Type  : Fast 1200mV 0C Model Hold 'onda:b2v_inst|rlj'
+Slack : 0.091
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'reloj_ar:b2v_inst6|reloj_out'
+Slack : 0.192
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -1.622
+TNS   : -106.916
+
+Type  : Fast 1200mV 0C Model Recovery 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : -0.811
+TNS   : -0.811
+
+Type  : Fast 1200mV 0C Model Recovery 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : -0.800
+TNS   : -0.800
+
+Type  : Fast 1200mV 0C Model Recovery 'onda:b2v_inst|rlj'
+Slack : -0.592
+TNS   : -0.592
+
+Type  : Fast 1200mV 0C Model Recovery 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -0.509
+TNS   : -0.509
+
+Type  : Fast 1200mV 0C Model Recovery 'reloj_ar:b2v_inst6|reloj_out'
+Slack : -0.113
+TNS   : -0.565
+
+Type  : Fast 1200mV 0C Model Recovery 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : 1.338
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : -1.152
+TNS   : -18.424
+
+Type  : Fast 1200mV 0C Model Removal 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -0.842
+TNS   : -13.464
+
+Type  : Fast 1200mV 0C Model Removal 'onda:b2v_inst|rlj'
+Slack : -0.458
+TNS   : -7.800
+
+Type  : Fast 1200mV 0C Model Removal 'reloj_ar:b2v_inst6|reloj_out'
+Slack : 0.126
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : 1.077
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : 1.086
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.276
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'onda:b2v_inst|rlj'
+Slack : -1.000
+TNS   : -26.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'contador_rlj:b2v_inst1|MAX_cont[1]'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reloj:b2v_inst5|altpll:altpll_component|reloj_altpll6:auto_generated|pll_lock_sync'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reloj_ar:b2v_inst6|reloj_out'
+Slack : -1.000
+TNS   : -10.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'antirrebote:b2v_inst7|FASE_OUT'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'antirrebote:b2v_inst7|PB_SIN_REBOTE'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entrada'
+Slack : 3.569
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'b2v_inst5|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 399.773
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'b2v_inst5|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 249999.772
+TNS   : 0.000
+
+------------------------------------------------------------

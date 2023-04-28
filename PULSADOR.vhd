@@ -1,0 +1,35 @@
+LIBRARY IEEE;
+USE  IEEE.STD_LOGIC_1164.all;
+USE  IEEE.STD_LOGIC_ARITH.all;
+USE  IEEE.STD_LOGIC_UNSIGNED.all;
+
+--El bloque PULSADOR mantiene la salida del bloque ANTIRREBOTE
+--de manera de poder ser la seleccion del bloque MULTIPLEXOR
+--Su salida esta conectada a un LED (en la FPGA)
+
+ENTITY PULSADOR IS
+PORT(CLK, RESET: IN STD_LOGIC;
+PB_OUT: BUFFER STD_LOGIC);
+END PULSADOR;
+
+ARCHITECTURE a OF PULSADOR IS
+
+SIGNAL SALIDA_PB: STD_LOGIC;
+
+BEGIN
+
+PROCESS (CLK, RESET)
+BEGIN
+
+   if(RESET='1') then
+      SALIDA_PB<='1';
+
+	ELSIF (falling_edge(CLK)) THEN
+      SALIDA_PB<=NOT(SALIDA_PB);
+   END IF;
+
+END PROCESS;
+	
+PB_OUT<=SALIDA_PB;
+
+END a;

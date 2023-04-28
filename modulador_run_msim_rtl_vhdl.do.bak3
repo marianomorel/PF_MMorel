@@ -1,0 +1,26 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/Mariano/Desktop/moduladorBPSK_DEFINITIVO/db {C:/Users/Mariano/Desktop/moduladorBPSK_DEFINITIVO/db/reloj_altpll1.v}
+vcom -93 -work work {C:/Users/Mariano/Desktop/moduladorBPSK_DEFINITIVO/moduladorSCH_VHDL.vhd}
+vcom -93 -work work {C:/Users/Mariano/Desktop/moduladorBPSK_DEFINITIVO/reloj_ar.vhd}
+vcom -93 -work work {C:/Users/Mariano/Desktop/moduladorBPSK_DEFINITIVO/antirrebote.vhd}
+vcom -93 -work work {C:/Users/Mariano/Desktop/moduladorBPSK_DEFINITIVO/multiplexor.vhd}
+vcom -93 -work work {C:/Users/Mariano/Desktop/moduladorBPSK_DEFINITIVO/pseudoaleatorio.vhd}
+vcom -93 -work work {C:/Users/Mariano/Desktop/moduladorBPSK_DEFINITIVO/onda.vhd}
+vcom -93 -work work {C:/Users/Mariano/Desktop/moduladorBPSK_DEFINITIVO/reloj.vhd}
+vcom -93 -work work {C:/Users/Mariano/Desktop/moduladorBPSK_DEFINITIVO/contador_rlj.vhd}
+vcom -93 -work work {C:/Users/Mariano/Desktop/moduladorBPSK_DEFINITIVO/PULSADOR.vhd}
+
+vcom -93 -work work {C:/Users/Mariano/Desktop/moduladorBPSK_DEFINITIVO/modulador_TB1.vhd}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneiii -L rtl_work -L work -voptargs="+acc"  modulador_TB1
+
+add wave *
+view structure
+view signals
+run -all

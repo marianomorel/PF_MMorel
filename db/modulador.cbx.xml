@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="modulador">
+		<CBX_INST_ENTRY INSTANCE_NAME="|moduladorSCH_VHDL|reloj:b2v_inst5|altpll:altpll_component" CBX_FILE_NAME="reloj_altpll6.v"/>
+	</PROJECT>
+</LOG_ROOT>
